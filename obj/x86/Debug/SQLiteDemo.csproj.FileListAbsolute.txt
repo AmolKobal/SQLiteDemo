@@ -1,0 +1,18 @@
+C:\MyData\PC Data\My Projects\SQLiteDemo\bin\Debug\SQLiteDemo.exe
+C:\MyData\PC Data\My Projects\SQLiteDemo\bin\Debug\SQLiteDemo.pdb
+C:\MyData\PC Data\My Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.csprojResolveAssemblyReference.cache
+C:\MyData\PC Data\My Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.Properties.Resources.resources
+C:\MyData\PC Data\My Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.csproj.GenerateResource.Cache
+C:\MyData\PC Data\My Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.exe
+C:\MyData\PC Data\My Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.pdb
+C:\MyData\PC Data\My Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.frmDemo.resources
+C:\MyData\Projects\SQLiteDemo\bin\Debug\SQLiteDemo.exe
+C:\MyData\Projects\SQLiteDemo\bin\Debug\SQLiteDemo.pdb
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.csprojAssemblyReference.cache
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.frmDemo.resources
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.Properties.Resources.resources
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.csproj.GenerateResource.cache
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.csproj.CoreCompileInputs.cache
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.csproj.CopyComplete
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.exe
+C:\MyData\Projects\SQLiteDemo\obj\x86\Debug\SQLiteDemo.pdb
