@@ -10,9 +10,9 @@ using System.Data.SQLite;
 
 namespace SQLiteDemo
 {
-    public partial class frmDemo : Form
+    public partial class frmScores : Form
     {
-        public frmDemo()
+        public frmScores()
         {
             InitializeComponent();
         }
@@ -39,6 +39,8 @@ namespace SQLiteDemo
                 command.ExecuteNonQuery();
 
                 m_dbConnection.Close();
+
+                MessageBox.Show("Connected to Database successfuly!");
             }
             catch (Exception ex)
             {

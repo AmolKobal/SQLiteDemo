@@ -1,6 +1,6 @@
 ﻿namespace SQLiteDemo
 {
-    partial class frmDemo
+    partial class frmScores
     {
         /// <summary>
         /// Required designer variable.
@@ -38,9 +38,10 @@
             // 
             // btnTestConnection
             // 
-            this.btnTestConnection.Location = new System.Drawing.Point(23, 25);
+            this.btnTestConnection.Location = new System.Drawing.Point(31, 31);
+            this.btnTestConnection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTestConnection.Name = "btnTestConnection";
-            this.btnTestConnection.Size = new System.Drawing.Size(146, 23);
+            this.btnTestConnection.Size = new System.Drawing.Size(195, 28);
             this.btnTestConnection.TabIndex = 0;
             this.btnTestConnection.Text = "Test Connection";
             this.btnTestConnection.UseVisualStyleBackColor = true;
@@ -48,9 +49,10 @@
             // 
             // btnAddScore
             // 
-            this.btnAddScore.Location = new System.Drawing.Point(24, 80);
+            this.btnAddScore.Location = new System.Drawing.Point(32, 98);
+            this.btnAddScore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddScore.Name = "btnAddScore";
-            this.btnAddScore.Size = new System.Drawing.Size(146, 23);
+            this.btnAddScore.Size = new System.Drawing.Size(195, 28);
             this.btnAddScore.TabIndex = 0;
             this.btnAddScore.Text = "Add Score";
             this.btnAddScore.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 136);
+            this.button1.Location = new System.Drawing.Point(31, 167);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 23);
+            this.button1.Size = new System.Drawing.Size(195, 28);
             this.button1.TabIndex = 0;
             this.button1.Text = "Show Score";
             this.button1.UseVisualStyleBackColor = true;
@@ -71,9 +74,11 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.Location = new System.Drawing.Point(207, 136);
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(276, 167);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(367, 181);
+            this.listView1.Size = new System.Drawing.Size(488, 222);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -86,17 +91,18 @@
             // 
             this.columnHeader2.Text = "Score";
             // 
-            // frmDemo
+            // frmScores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 352);
+            this.ClientSize = new System.Drawing.Size(808, 433);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAddScore);
             this.Controls.Add(this.btnTestConnection);
-            this.Name = "frmDemo";
-            this.Text = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "frmScores";
+            this.Text = "Scores";
             this.ResumeLayout(false);
 
         }

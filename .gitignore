@@ -8,11 +8,16 @@
 #/.vs/SQLiteDemo/v16/Server/sqlite3/*.lock
 *.lock
 
-# Ignore all logfiles and tempfiles.
+# Ignore EXE, PDB file.
+*.exe
+*.pdb
+
+# Ignore all logfiles, Cache and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+*.cache
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
