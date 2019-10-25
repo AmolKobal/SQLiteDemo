@@ -19,31 +19,26 @@ namespace SQLiteDemo
 
         private void btnTestConnection_Click(object sender, EventArgs e)
         {
+            SQLiteConnection m_dbConnection = new SQLiteConnection();
+            string sql;
+
             try
             {
-                SQLiteConnection.CreateFile("MyDatabase.sqlite");
-
-                SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
-                m_dbConnection.Open();
-
-                string sql = "if exists(select * from highscores)";
-
-                sql = "create table highscores (name varchar(20), score int)";
-                
-                SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
-                command.ExecuteNonQuery();
-
-                sql = "insert into highscores (name, score) values ('Me', 9001)";
-
-                command = new SQLiteCommand(sql, m_dbConnection);
-                command.ExecuteNonQuery();
-
-                m_dbConnection.Close();
+                LoadScoreDetails();
 
                 MessageBox.Show("Connected to Database successfuly!");
             }
             catch (Exception ex)
             {
+                try
+                {
+                    sql = "create table highscores (name varchar(20), score int)";
+                    SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+                    command.ExecuteNonQuery();
+                }
+                catch
+                {
+                }
                 MessageBox.Show(ex.Message);
             }
         }
@@ -53,7 +48,7 @@ namespace SQLiteDemo
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
             m_dbConnection.Open();
 
-            string sql = "insert into highscores (name, score) values ('You', 9002)";
+            string sql = "insert into highscores (name, score) values ('" + txtName.Text + "', '" + txtScore.Text + "')";
 
             SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
             command.ExecuteNonQuery();
@@ -61,11 +56,18 @@ namespace SQLiteDemo
             m_dbConnection.Close();
 
             MessageBox.Show("Added");
+
+            LoadScoreDetails();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            listView1.Items.Clear();
+            LoadScoreDetails();
+        }
+
+        private void LoadScoreDetails()
+        {
+            lstScore.Items.Clear();
 
             SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
 
@@ -79,10 +81,36 @@ namespace SQLiteDemo
             {
                 for (int index = 0; index < ds.Tables[0].Rows.Count; index++)
                 {
-                    ListViewItem item = listView1.Items.Add(new ListViewItem(ds.Tables[0].Rows[index]["name"].ToString()));
+                    ListViewItem item = lstScore.Items.Add(new ListViewItem(ds.Tables[0].Rows[index]["name"].ToString()));
                     item.SubItems.Add(ds.Tables[0].Rows[index]["score"].ToString());
                 }
             }
+        }
+
+        private void BtnRemove_Click(object sender, EventArgs e)
+        {
+            if(lstScore.SelectedItems.Count < 1)
+            {
+                MessageBox.Show("Select Record to remove.");
+                return;
+            }
+
+            SQLiteConnection m_dbConnection = new SQLiteConnection("Data Source=MyDatabase.sqlite;Version=3;");
+            m_dbConnection.Open();
+
+            string name = lstScore.SelectedItems[0].SubItems[0].Text;
+            string score = lstScore.SelectedItems[0].SubItems[1].Text;
+
+            string sql = "Delete from highscores where name = '" + name + "' and score = '" + score + "'";
+
+            SQLiteCommand command = new SQLiteCommand(sql, m_dbConnection);
+            command.ExecuteNonQuery();
+
+            m_dbConnection.Close();
+
+            MessageBox.Show("Removed");
+
+            LoadScoreDetails();
         }
     }
 }
