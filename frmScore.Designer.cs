@@ -50,7 +50,7 @@
             this.btnTestConnection.Name = "btnTestConnection";
             this.btnTestConnection.Size = new System.Drawing.Size(195, 28);
             this.btnTestConnection.TabIndex = 0;
-            this.btnTestConnection.Text = "Test Connection";
+            this.btnTestConnection.Text = "&Test Connection";
             this.btnTestConnection.UseVisualStyleBackColor = true;
             this.btnTestConnection.Click += new System.EventHandler(this.btnTestConnection_Click);
             // 
@@ -60,8 +60,8 @@
             this.btnAddScore.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddScore.Name = "btnAddScore";
             this.btnAddScore.Size = new System.Drawing.Size(195, 28);
-            this.btnAddScore.TabIndex = 0;
-            this.btnAddScore.Text = "Add Score";
+            this.btnAddScore.TabIndex = 5;
+            this.btnAddScore.Text = "&Add Score";
             this.btnAddScore.UseVisualStyleBackColor = true;
             this.btnAddScore.Click += new System.EventHandler(this.btnAddScore_Click);
             // 
@@ -71,8 +71,8 @@
             this.btnShowScore.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowScore.Name = "btnShowScore";
             this.btnShowScore.Size = new System.Drawing.Size(195, 28);
-            this.btnShowScore.TabIndex = 0;
-            this.btnShowScore.Text = "Show Score";
+            this.btnShowScore.TabIndex = 1;
+            this.btnShowScore.Text = "&Show Score";
             this.btnShowScore.UseVisualStyleBackColor = true;
             this.btnShowScore.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -87,7 +87,7 @@
             this.lstScore.Margin = new System.Windows.Forms.Padding(4);
             this.lstScore.Name = "lstScore";
             this.lstScore.Size = new System.Drawing.Size(488, 222);
-            this.lstScore.TabIndex = 1;
+            this.lstScore.TabIndex = 6;
             this.lstScore.UseCompatibleStateImageBehavior = false;
             this.lstScore.View = System.Windows.Forms.View.Details;
             // 
@@ -131,7 +131,7 @@
             this.txtScore.Location = new System.Drawing.Point(65, 54);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(146, 22);
-            this.txtScore.TabIndex = 3;
+            this.txtScore.TabIndex = 4;
             // 
             // grpNewScore
             // 
@@ -153,8 +153,8 @@
             this.btnRemove.Margin = new System.Windows.Forms.Padding(4);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(195, 28);
-            this.btnRemove.TabIndex = 0;
-            this.btnRemove.Text = "Remove Score";
+            this.btnRemove.TabIndex = 2;
+            this.btnRemove.Text = "&Remove Score";
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.BtnRemove_Click);
             // 

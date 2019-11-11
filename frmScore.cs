@@ -58,6 +58,10 @@ namespace SQLiteDemo
             MessageBox.Show("Added");
 
             LoadScoreDetails();
+
+            txtName.Text = "";
+            txtScore.Text = "";
+            txtName.Focus();
         }
 
         private void button1_Click(object sender, EventArgs e)
